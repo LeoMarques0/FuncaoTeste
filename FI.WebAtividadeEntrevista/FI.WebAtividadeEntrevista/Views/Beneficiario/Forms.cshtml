@@ -1,0 +1,42 @@
+﻿<div id="beneficiario" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:800px">
+            <div class="modal-header">
+                <button onclick="CloseModal()" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Beneficiarios</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="CPF">CPF:</label>
+                            <input oninput="mascara(this, '000.000.000-00')" required="required" type="text" class="form-control" id="CPFBeneficiario" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="14">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Nome">Nome:</label>
+                            <input required="required" type="text" class="form-control" id="NomeBeneficiario" name="Nome" placeholder="Ex.: João" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="IncluirBtn">
+                        <div class="form-group">
+                            <button id="incluirBeneficiario" type="button" class="btn btn-sm btn-success" style="width: 80%; height: 35px; margin-top:11%">Incluir</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="AlterarBtn" style="display:none">
+                        <div class="form-group">
+                            <button id="alterarBeneficiario" type="button" class="btn btn-sm btn-success" style="width: 45%; height: 35px; margin-top:11%; margin-right:5%">Alterar</button>
+                            <button onclick="Cancelar()" id="cancelarBeneficiario" type="button" class="btn btn-sm btn-success" style="width: 45%; height: 35px; margin-top:11%">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <table id="gridBeneficiarios" class="table">
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button onclick="CloseModal()" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

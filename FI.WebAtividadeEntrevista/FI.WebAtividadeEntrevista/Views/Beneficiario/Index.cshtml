@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Beneficiarios";
+}
+@section scripts{
+    <script>
+    var urlAlteracao = '@Url.Action("Alterar", "Beneficiario", new { area = "" })';
+    var urlClienteList = '@Url.Action("BeneficiarioList", "Beneficiario", new { area = "" })';
+
+    </script>
+    @*@Scripts.Render("~/bundles/listClientes")*@
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")
